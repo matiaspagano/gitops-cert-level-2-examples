@@ -10,7 +10,7 @@ spec:
               repoURL: https://github.com/codefresh-contrib/gitops-cert-level-2-examples.git
               revision: HEAD
               directories:
-                - path: application-sets/example-apps/*
+              - path: application-sets/example-apps/*
           - clusters: {}
   template:
     metadata:
@@ -26,6 +26,6 @@ spec:
         namespace: '{{path.basename}}'
       syncPolicy:
         syncOptions:
-          - CreateNamespace=true  
+          - CreateNamespace=true
         automated:
           selfHeal: true
